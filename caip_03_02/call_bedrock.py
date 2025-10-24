@@ -66,10 +66,10 @@ if __name__ == "__main__":
     bedrock = boto3.client('bedrock-runtime')
 
     # Sample prompt to test the model
-    prompt = "I need a few sentences on why black is the best color."
+    prompt = "I need a few sentences on why red is the best color."
 
     # Call Bedrock and print responses
-    responses = call_bedrock(bedrock, prompt)
+    responses = call_bedrock(bedrock, prompt, max_tokens=50)
 
     for response in responses:
         print(response)
